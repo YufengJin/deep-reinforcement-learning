@@ -13,3 +13,15 @@ Try to change the parameters in the notebook, to see if you can get the agent to
 ### Results
 
 ![Trained Agent][image1]
+
+### Algorithm
+```
+func CEM():
+  for i_iteration in Episodes:
+    1. add noise to the last weights, and generate pop_size* randomed_weight
+    2. run and estimate all pop_size sets of RETURN
+    3. Select the ten sets of weights with the largest RETURN, and mean them get a best weights
+    4. evaluate the RETURN with the new generated weights, append it in scores_deque
+      break if mean of score_deque > 90
+
+```
